@@ -1,18 +1,16 @@
-import sys
-
 import random
 
 opciones = ["piedra","papel","tijeras"]
 
 while True:
-    jugador = input("elige: piedra, papel o tijeras o escribe 'salir'")
-
+    jugador = input("elige: piedra, papel o tijeras o escribe 'salir' :")
+    jugador = jugador.lower()
     if jugador == "salir":
         print("! juego terminado")
         break
 
     if jugador not in opciones:
-        print(" opcion no valida...")
+        print(" opcion no valida, debe elegir entre piedra, papel o tijeras...")
         continue
 
     computador = random.choices(opciones)
